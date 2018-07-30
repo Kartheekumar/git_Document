@@ -1,0 +1,272 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+######################################################################## 
+#                                                                      #
+#     1)check the git version                                          #
+#     2)list out the git command and description                       #
+#                                                                      #
+########################################################################
+=========================== git version =========================
+F:\Testing\my_repository>git --version
+git version 2.17.1.windows.2
+=========================== git commands =========================
+F:\Testing\my_repository>git help
+			
+			(or)
+
+F:\Testing\my_repository>git --help
+
+
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+=========================== try below commnads =========================
+F:\Testing\my_repository>git help
+F:\Testing\my_repository>git help -a
+F:\Testing\my_repository>git help -g
+
+=========================== know the particualr command =========================
+F:\Testing\my_repository>git <command> --help
+
+Example:
+
+F:\Testing\my_repository>git add --help
+#the abow command display the data in web browser
+F:\Testing\my_repository>git add --h
+
+=========================== ll not work =========================
+F:\Testing\my_repository>ll
+'ll' is not recognized as an internal or external command,
+operable program or batch file.
+
+######################################################################
+#                 Telling Git Who You Are                            #  
+#     1)set the user name                                            #
+#     2)set the user email                                           #
+#                                                                    #  
+######################################################################
+
+F:\Testing\my_repository>git config --global user.name "karthee kumar vanama"
+
+F:\Testing\my_repository>git config --global user.email "kartheekumr.v39@gmail.com"
+
+F:\Testing\my_repository>git config --list
+
+
+=========================== list  =========================
+F:\Testing\my_repository>ls
+=========================== git  =========================
+F:\Testing\my_repository>git init
+Initialized empty Git repository in F:/Testing/my_repository/.git/
+=========================== git version =========================
+F:\Testing\my_repository>ls
+
+F:\Testing\my_repository>ls -a
+.  ..  .git
+
+F:\Testing\my_repository>ls -al
+total 4
+drwxr-xr-x 1 lakshmi 197121 0 Jul 27 15:57 .
+drwxr-xr-x 1 lakshmi 197121 0 Jul 27 15:57 ..
+drwxr-xr-x 1 lakshmi 197121 0 Jul 27 15:57 .git
+=========================== creat a file and insert data =========================
+F:\Testing\my_repository>cat > program1.txt
+This is my first program
+statement 1
+statement 2
+statement 3
+=========================== see file content =========================
+F:\Testing\my_repository>cat program1.txt
+This is my first program
+statement 1
+statement 2
+statement 3
+=========================== git status =========================
+F:\Testing\my_repository>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        program1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+=========================== git add =========================
+F:\Testing\my_repository>git add program1.txt
+warning: LF will be replaced by CRLF in program1.txt.
+The file will have its original line endings in your working directory.
+
+F:\Testing\my_repository>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   program1.txt
+
+=========================== git commit =========================
+F:\Testing\my_repository>git commit -m "save "
+[master (root-commit) ea575a8] save
+ 1 file changed, 4 insertions(+)
+ create mode 100644 program1.txt
+=========================== git status =========================
+F:\Testing\my_repository>git status
+On branch master
+nothing to commit, working tree clean
+=========================== git log =========================
+F:\Testing\my_repository>git log
+commit ea575a822c13e0543dbdb6362c824b03c2c54bb5 (HEAD -> master)
+Author: karthee <kartheekumar.v39@gmail.com>
+Date:   Fri Jul 27 16:06:51 2018 +0530
+
+    save
+=========================== git  =========================
+F:\Testing\my_repository>git log --oneline
+ea575a8 (HEAD -> master) save
+
+
+F:\Testing\my_repository>
+
+F:\Testing\my_repository>echo i am modifying code
+i am modifying code
+=========================== git status=========================
+F:\Testing\my_repository>git status
+On branch master
+nothing to commit, working tree clean
+=========================== file content modification =========================
+F:\Testing\my_repository>echo statement3 >> program1.txt
+
+F:\Testing\my_repository>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   program1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+F:\Testing\my_repository>git add program1.txt
+warning: LF will be replaced by CRLF in program1.txt.
+The file will have its original line endings in your working directory.
+
+F:\Testing\my_repository>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   program1.txt
+
+
+F:\Testing\my_repository>git commit -m "2nd save"
+[master bb6c299] 2nd save
+ 1 file changed, 1 insertion(+)
+
+F:\Testing\my_repository>git status
+On branch master
+nothing to commit, working tree clean
+
+F:\Testing\my_repository>git log
+commit bb6c2992d1bccd5f943e57af5973bdf2394b1937 (HEAD -> master)
+Author: karthee <kartheekumar.v39@gmail.com>
+Date:   Fri Jul 27 16:11:34 2018 +0530
+
+    2nd save
+
+commit ea575a822c13e0543dbdb6362c824b03c2c54bb5
+Author: karthee <kartheekumar.v39@gmail.com>
+Date:   Fri Jul 27 16:06:51 2018 +0530
+
+    save
+
+F:\Testing\my_repository>git log --oneline
+bb6c299 (HEAD -> master) 2nd save
+ea575a8 save
+
+#####################################################################################
+#                                                                                   #
+#                              Create the Github account                            #
+#                                https://github.com/join                            #
+#                                                                                   #
+#                           1)create the new Repository                             #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#####################################################################################
+=========================== git remote add =========================
+  
+F:\Testing\my_repository>git remote add origin https://github.com/Kartheekumar/my_repository.git
+=========================== git version =========================
+F:\Testing\my_repository> git push origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 472 bytes | 472.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Kartheekumar/my_repository.git
+ * [new branch]      master -> master
+=========================== copy Remote repo --> local Repo =========================
+F:\Testing\my_repository>cd ..
+
+F:\Testing>mkdir copy_project
+
+F:\Testing>cd copy_project
+
+F:\Testing\copy_project>git clone https://github.com/Kartheekumar/my_repository.git
+Cloning into 'my_repository'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 1), reused 6 (delta 1), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+
+

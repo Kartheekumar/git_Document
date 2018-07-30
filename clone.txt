@@ -1,0 +1,17 @@
+###################################################################################
+#                                                                                 #
+#  clone: makes a local copy of the specified remote repository onto the local    #
+#                                                                                 #
+###################################################################################
+
+usage: git clone           <repo>                              [<dir>]
+
+F:\>git clone https://github.com/Kartheekumar/git_test1.git copy_git_test1
+Cloning into 'copy_git_test1'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+==========================================================================
+open mycomputers-->F: drive --> observe the copy_git_test1 folder
+
+

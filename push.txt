@@ -1,0 +1,24 @@
+################################################################# 
+#                                                               #
+#    push : local repository to Remote repository               #
+#                                                               #
+#################################################################
+F:\git_test1>git remote show
+
+F:\git_test1>git remote add kumar https://github.com/Kartheekumar/git_test1.git
+
+F:\git_test1>git remote show
+kumar
+
+F:\git_test1>git push kumar master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 246 bytes | 246.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Kartheekumar/git_test1.git
+ * [new branch]      master -> master
+ 
+F:\git_test1> 
+
+
+
+
